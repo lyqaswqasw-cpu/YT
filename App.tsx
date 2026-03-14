@@ -2,8 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MessageSquare, Image as ImageIcon, Code, Shield, Menu, X, Sparkles, Send, Zap, Loader2, Download } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
-import { chatWithAI, generateImage, explainCode } from './services/gemini';
-
+import { generateResponse } from './gemini';
 // Types
 type Tab = 'chat' | 'generate' | 'code' | 'privacy';
 type Message = { role: 'user' | 'ai'; content: string };
